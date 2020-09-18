@@ -26,11 +26,23 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
     iii) crear un elemento Button utilizando el método (CreateElement)
     iv) Asignarle el nombre correspondinete al arreglo en esa iteración
     v) Agregar el elmento como hijo del div "dummy". 
-
+ 
 **/
 
 // CREA TU FUNCION challenge1 aqui 
 
+function challenge1(){
+
+    var j = prompt("Cuantos botones quieres?");
+
+    for(var i = 0; i < j; i++){
+        console.log((nombres[i]));
+
+        var boton = document.createElement("button");
+        boton.textContent = nombres[i] + ' ';
+        document.getElementById("dummy").appendChild(boton);
+    }
+}
 
 
 // ************** PARTE 2    **************
@@ -42,7 +54,13 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 
 // CREA TU FUNCION challenge2 2 aquí.
 
+function challenge2(){
 
+    for (var i = 0; i < nombres.length; i++) {
+        console.log(nombres[i].toLocaleUpperCase());
+    }
+
+}
 
 // ************** PARTE 3    **************
 
@@ -68,7 +86,28 @@ Invoca la función para validar su funcionalidad.
 
 */
 
+/* challenge 3 */
+var Dog = function(nombre, color, raza){
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
 
+    /*bonus print*/
+    this.printInfo = function(){
+        console.log("Nombre: " + this.nombre + " , De color: " + this.color + " , Raza: " + this.raza);
+    }
+
+}
+
+function challenge3(){
+    var perroMaria = new Dog("Vaca", "Negro", "Mestizo");
+    var perroPau = new Dog("Specky", "Beige", "Chihuahua");
+    var perroMary = new Dog("Wippy", "Blanco", "French Poodle Mini");
+
+    perroMaria.printInfo();
+    perroPau.printInfo();
+    perroMary.printInfo();
+}
 
 
 
